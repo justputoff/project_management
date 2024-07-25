@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->integer('level')->default(1);
+            $table->string('level')->default('beginner');
             $table->string('status')->default('pending');
             $table->string('thumbnail')->nullable();
             $table->integer('estimate_time')->nullable();
