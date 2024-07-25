@@ -1,0 +1,304 @@
+{
+    "role": [
+        {
+            "name": "string",
+            "description": "string",
+            "users": [
+                {
+                    "name": "string",
+                    "email": "string",
+                    "password": "string",
+                    "role_id": "integer"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "Role",
+                    "foreignId": "role_id"
+                }
+            ]
+        },
+        {
+            "relation": "hasMany",
+            "model": "User"
+        }
+    ],
+
+    "departments": [
+        {
+          "name": "string",
+          "code": "string",
+          "study_programs": [
+            {
+              "name": "string",
+              "code": "string",
+              "department_id": "integer"
+            },
+            {
+              "relation": [
+                {
+                    "relation": "belongsTo",
+                    "model": "Department",
+                    "foreignId": "department_id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "relation": [
+            {
+                "relation": "hasMany",
+                "model": "StudyProgram"
+            }
+          ]
+        }
+      ],
+
+    "users": [
+        {
+            "name": "string",
+            "email": "string",
+            "password": "string",
+            "role_id": "integer",
+            "student": [
+                {
+                    "user_id": "integer",
+                    "study_program_id": "integer",
+                    "phone": "string",
+                    "address": "string",
+                    "nim": "string",
+                    "github_url": "string",
+                    "linkedin_url": "string",
+                    "profile_picture": "string"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "StudyProgram",
+                    "foreignId": "study_program_id"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "User",
+                    "foreignId": "user_id"
+                }
+            ],
+            "lecturer": [
+                {
+                    "user_id": "integer",
+                    "phone": "string",
+                    "address": "string",
+                    "nidn": "string",
+                    "github_url": "string",
+                    "linkedin_url": "string",
+                    "profile_picture": "string",
+                    "study_program_id": "integer"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "StudyProgram",
+                    "foreignId": "study_program_id"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "User",
+                    "foreignId": "user_id"
+                }
+            ]
+        },
+        {
+            "relation": "hasOne",
+            "model": "Student"
+        },
+        {
+            "relation": "hasOne",
+            "model": "Lecturer"
+        }
+    ],
+
+    "project": [
+        {
+            "user_id": "integer",
+            "name": "string",
+            "status": "string",
+            "thumbnail": "string",
+            "estimate_time": "string",
+            "start_date": "string",
+            "end_date": "string",
+            "description": "string",
+            "github_url": "string",
+            "demo_url": "string",
+            "score": "integer",
+            "level": "integer",
+            "contributors": [
+                {
+                    "user_id": "integer",
+                    "role": "string",
+                    "project_id": "integer"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "User",
+                    "foreignId": "user_id"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "Project",
+                    "foreignId": "project_id"
+                }
+            ],
+            "chapters": [
+                {
+                    "name": "string",
+                    "description": "string",
+                    "estimate_time": "string",
+                    "start_date": "string",
+                    "end_date": "string",
+                    "project_id": "integer"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "Project",
+                    "foreignId": "project_id"
+                }
+            ],
+            "comments": [
+                {
+                    "comment": "string",
+                    "project_id": "integer",
+                    "user_id": "integer"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "Project",
+                    "foreignId": "project_id"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "User",
+                    "foreignId": "user_id"
+                }
+            ]
+        },
+        {
+            "relation": "belongsTo",
+            "model": "User",
+            "foreignId": "user_id"
+        },
+        {
+            "relation": "hasMany",
+            "model": "Contributor"
+        },
+        {
+            "relation": "hasMany",
+            "model": "Chapter"
+        },
+        {
+            "relation": "hasMany",
+            "model": "Comment"
+        }
+    ],
+
+    "chapters": [
+        {
+            "project_id": "integer",
+            "name": "string",
+            "description": "string",
+            "estimate_time": "string",
+            "start_date": "string",
+            "end_date": "string",
+            "status": "string",
+            "chapter_images": [
+                {
+                    "image": "string",
+                    "chapter_id": "integer"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "Chapter",
+                    "foreignId": "chapter_id"
+                }
+            ],
+            "chapter_comments": [
+                {
+                    "comment": "string",
+                    "chapter_id": "integer",
+                    "user_id": "integer",
+                    "chapter_comment_reply": [
+                        {
+                            "comment": "string",
+                            "comment_id": "integer",
+                            "user_id": "integer"
+                        },
+                        {
+                            "relation": "belongsTo",
+                            "model": "ChapterComment",
+                            "foreignId": "comment_id"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "relation": "belongsTo",
+            "model": "Project",
+            "foreignId": "project_id"
+        },
+        {
+            "relation": "hasMany",
+            "model": "ChapterImage"
+        },
+        {
+            "relation": "hasMany",
+            "model": "ChapterComment"
+        }
+    ],
+
+    "comments": [
+        {
+            "comment": "string",
+            "project_id": "integer",
+            "user_id": "integer",
+            "comment_reply": [
+                {
+                    "comment": "string",
+                    "comment_id": "integer",
+                    "user_id": "integer"
+                },
+                {
+                    "relation": "belongsTo",
+                    "model": "Comment",
+                    "foreignId": "comment_id"
+                }
+            ]
+        },
+        {
+            "relation": "belongsTo",
+            "model": "Project",
+            "foreignId": "project_id"
+        },
+        {
+            "relation": "belongsTo",
+            "model": "User",
+            "foreignId": "user_id"
+        },
+        {
+            "relation": "hasMany",
+            "model": "CommentReply"
+        }
+    ],
+
+    "charities": [
+        {
+            "user_id": "integer",
+            "amount": "integer",
+            "description": "string",
+            "image": "string",
+            "status": "string"
+        },
+        {
+            "relation": "belongsTo",
+            "model": "User",
+            "foreignId": "user_id"
+        }
+    ]
+}
