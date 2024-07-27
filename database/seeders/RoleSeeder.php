@@ -13,17 +13,17 @@ class RoleSeeder extends Seeder
     public function run(): void
     {
         Role::create([
-            'name' => 'Admin',
+            'name' => 'admin',
             'description' => 'Administrator with full access'
         ]);
 
         Role::create([
-            'name' => 'Lecturer',
+            'name' => 'lecturer',
             'description' => 'Lecturer with access to manage courses and students'
         ]);
 
         Role::create([
-            'name' => 'Student',
+            'name' => 'student',
             'description' => 'Student with access to enroll in courses and view content'
         ]);
 
