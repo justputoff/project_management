@@ -7,6 +7,7 @@
             <h5 class="card-title">Project Detail</h5>
             <p class="card-text">Akses menu dan informasi penting lainnya di sini</p>
             <a href="{{ route('projects.index') }}" class="btn btn-sm btn-secondary mb-3">Back</a>
+            <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-warning mb-3">Edit</a>
         </div>
     </div>
 
@@ -29,20 +30,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <img src="{{ Storage::url($project->thumbnail) }}" class="img-fluid mt-3" alt="Project Image">
-                </div>
-                <div class="col-md-5" style="max-height: 300px; overflow-y: auto;">
-                    @foreach ($project->comments->take(5) as $comment)
-                        <div class="bg-white row mb-2">
-                            <div class="col-md-3">
-                                <p class="text-muted">{{ $comment->user->name }}</p>
-                            </div>
-                            <div class="col-md-9">
-                                <p class="text-muted">{{ $comment->comment }}</p>
-                            </div>
-                        </div>
-                    @endforeach
                 </div>
             </div>
         </div>
@@ -66,7 +55,9 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-                    <p class="mt-3 text-dark bg-white">{{ $project->description }}</p>
+                    <div class="description-container bg-white text-dark">
+                        <p class="mt-3 description text-dark bg-white">{!! $project->description !!}</p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="chapters" role="tabpanel" aria-labelledby="chapters-tab">
                         @foreach($project->chapters as $chapter)
