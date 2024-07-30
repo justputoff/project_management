@@ -22,7 +22,7 @@
         <div class="row mb-3">
             <div class="col-md-12">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description" style="height: 200px" required></textarea>
+                <textarea class="form-control" id="editor" name="description"></textarea>
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>

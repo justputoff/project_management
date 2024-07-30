@@ -109,6 +109,18 @@
         width: 100px;
       }
       
+    .ck-editor__editable[role="textbox"] {
+      /* editing area */
+      min-height: 200px;
+    }
+
+    .ck-content .image {
+      /* block images */
+      max-width: 80%;
+      margin: 20px auto;
+    }
+      
+      
       </style>
   </head>
 

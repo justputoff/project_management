@@ -17,7 +17,7 @@
                     <h2>{{ $chapter->name }}</h2>
                     <span class="badge bg-primary">{{ $chapter->status }}</span>
                     <p class="mt-2">
-                        <img src="{{ asset('frontend/assets/images/avatar.svg') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
+                        <img src="{{ asset('frontend/assets/images/avatar.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
                         {{ $chapter->project->user->name }}<br>
                         <small class="text-muted">Project Manager</small>
                     </p>
@@ -27,7 +27,7 @@
                     <a href="https://www.youtube.com" target="_blank" class="btn btn-primary">Upload Image</a>
                 </div>
             </div>
-            <img src="{{ Storage::url($chapter->project->thumbnail) }}" class="img-fluid mt-3" alt="Project Image">
+            <img src="{{ Storage::url($chapter->project->thumbnail) }}" class="img-fluid mt-3" style="max-width: 1080px" alt="Project Image">
         </div>
     </div>
 
@@ -43,7 +43,9 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-                    <p class="mt-3 text-dark bg-white">{{ $chapter->description }}</p>
+                    <div class="description-container bg-white text-dark" style="max-height: 600px; overflow-y: auto;">
+                        <p class="mt-3 description text-dark bg-white">{!! $chapter->description !!}</p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
                     @foreach ($chapter->chapterComments as $comment)
@@ -64,10 +66,10 @@
                         <p class="text-muted mt-3">No comments found</p>
                     </div>
                     @endif
-                    <div class="bg-white p-3 text-start">
+                    <div class="bg-white p-3 text-start text-dark">
                         <form action="{{ route('chapterComments.store', $chapter->id) }}" method="post" class="mt-2 comment-form" style="display: none;">
                             @csrf
-                            <textarea type="text" name="comment" id="comment" class="form-control" cols="20" rows="10"></textarea>
+                            <input type="text" name="comment" id="comment" class="form-control">
                             <button type="submit" class="btn btn-sm btn-success mt-2">Submit</button>
                         </form>
                     </div>

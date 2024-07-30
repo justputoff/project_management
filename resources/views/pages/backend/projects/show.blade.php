@@ -18,7 +18,7 @@
                     <h2>{{ $project->name }}</h2>
                     <span class="badge bg-primary">{{ $project->status }}</span>
                     <p class="mt-2">
-                        <img src="{{ asset('frontend/assets/images/avatar.svg') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
+                        <img src="{{ asset('frontend/assets/images/avatar.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
                         {{ $project->user->name }}<br>
                         <small class="text-muted">Project Manager</small>
                     </p>
@@ -31,7 +31,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <img src="{{ Storage::url($project->thumbnail) }}" class="img-fluid mt-3" alt="Project Image">
+                    <img src="{{ Storage::url($project->thumbnail) }}" class="img-fluid mt-3" style="max-width: 1080px" alt="Project Image">
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-                    <div class="description-container bg-white text-dark">
+                    <div class="description-container bg-white text-dark" style="max-height: 600px; overflow-y: auto;">
                         <p class="mt-3 description text-dark bg-white">{!! $project->description !!}</p>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                     <div class="bg-white p-3 text-start">
                         <form action="{{ route('comments.store', $project->id) }}" method="post" class="mt-2 comment-form" style="display: none;">
                             @csrf
-                            <textarea type="text" name="comment" id="comment" class="form-control" cols="20" rows="10"></textarea>
+                            <input type="text" name="comment" id="comment" class="form-control">
                             <button type="submit" class="btn btn-sm btn-success mt-2">Submit</button>
                         </form>
                     </div>

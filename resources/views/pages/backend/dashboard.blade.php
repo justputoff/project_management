@@ -29,7 +29,7 @@
                             <div class="card text-center">
                                 <div class="card-body">
                                     <div class="avatar avatar-xl mb-3 m-auto m-auto">
-                                        <img src="{{ asset('frontend/assets/images/avatar.svg') }}" alt="Avatar" class="rounded-circle bg-secondary">
+                                        <img src="{{ asset('frontend/assets/images/avatar.png') }}" alt="Avatar" class="rounded-circle bg-secondary">
                                     </div>
                                     <h5 class="card-title">Michal Mazur</h5>
                                     <p class="text-white rounded-pill badge bg-warning p-2">Project Manager</p>
@@ -49,7 +49,7 @@
                             <div class="card text-center">
                                 <div class="card-body">
                                     <div class="avatar avatar-xl mb-3 m-auto">
-                                        <img src="{{ asset('frontend/assets/images/avatar.svg') }}" alt="Avatar" class="rounded-circle bg-secondary">
+                                        <img src="{{ asset('frontend/assets/images/avatar.png') }}" alt="Avatar" class="rounded-circle bg-secondary">
                                     </div>
                                     <h5 class="card-title">Nishar Ramzi</h5>
                                     <p class="text-white rounded-pill badge bg-primary p-2">Project Manager</p>
@@ -69,7 +69,7 @@
                             <div class="card text-center">
                                 <div class="card-body">
                                     <div class="avatar avatar-xl mb-3 m-auto">
-                                        <img src="{{ asset('frontend/assets/images/avatar.svg') }}" alt="Avatar" class="rounded-circle bg-secondary">
+                                        <img src="{{ asset('frontend/assets/images/avatar.png') }}" alt="Avatar" class="rounded-circle bg-secondary">
                                     </div>
                                     <h5 class="card-title">Jeni Kopter</h5>
                                     <p class="text-white rounded-pill badge bg-secondary p-2">Project Manager</p>
