@@ -16,7 +16,7 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
     {
-        $studentRole = Role::where('name', 'Student')->first();
+        $studentRole = Role::where('name', 'student')->first();
 
         $user = User::create([
             'name' => 'Student User',

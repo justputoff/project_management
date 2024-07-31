@@ -17,27 +17,22 @@
             </div>
             <div class="col-md-6">
                 <label for="level" class="form-label">Level</label>
-                <input type="text" class="form-control" id="level" name="level" value="{{ $project->level }}" required>
+                <select name="level" id="level" class="form-control">
+                    <option value="beginner" {{ $project->level == 'beginner' ? 'selected' : '' }}>Beginner</option>
+                    <option value="intermediate" {{ $project->level == 'intermediate' ? 'selected' : '' }}>Intermediate</option>
+                    <option value="advanced" {{ $project->level == 'advanced' ? 'selected' : '' }}>Advanced</option>
+                </select>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-md-6">
                 <label for="thumbnail" class="form-label">Thumbnail</label>
                 <input type="file" class="form-control" id="thumbnail" name="thumbnail">
+                <a class="btn btn-sm btn-primary mt-2" href="{{ Storage::url($project->thumbnail) }}" target="_blank">Current Image</a>
             </div>
             <div class="col-md-6">
                 <label for="estimate_time" class="form-label">Estimate Time</label>
                 <input type="text" class="form-control" id="estimate_time" name="estimate_time" value="{{ $project->estimate_time }}" required>
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label for="demo_url" class="form-label">Demo URL</label>
-                <input type="url" class="form-control" id="demo_url" name="demo_url" value="{{ $project->demo_url }}">
-            </div>
-            <div class="col-md-6">
-                <label for="github_url" class="form-label">GitHub URL</label>
-                <input type="url" class="form-control" id="github_url" name="github_url" value="{{ $project->github_url }}">
             </div>
         </div>
         <div class="row mb-3">

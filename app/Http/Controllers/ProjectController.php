@@ -29,8 +29,6 @@ class ProjectController extends Controller
             'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'estimate_time' => 'required|integer',
             'description' => 'required|string',
-            'github_url' => 'nullable|url',
-            'demo_url' => 'nullable|url',
             'level' => 'required|string|max:255',
         ]);
 
@@ -62,11 +60,9 @@ class ProjectController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:4096',
             'estimate_time' => 'required|string|max:255',
             'description' => 'required|string',
-            'github_url' => 'nullable|url',
-            'demo_url' => 'nullable|url',
             'level' => 'required|string|max:255',
         ]);
 

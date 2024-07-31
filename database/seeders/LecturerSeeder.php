@@ -16,7 +16,7 @@ class LecturerSeeder extends Seeder
      */
     public function run(): void
     {
-        $lecturerRole = Role::where('name', 'Lecturer')->first();
+        $lecturerRole = Role::where('name', 'lecturer')->first();
 
         $user = User::create([
             'name' => 'Lecturer User',
