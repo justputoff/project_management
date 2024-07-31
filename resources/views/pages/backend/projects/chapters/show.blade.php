@@ -24,7 +24,7 @@
                 </div>
                 <div>
                     <p>Durasi Chapter: {{ $chapter->estimate_time }} Days</p>
-                    <a href="https://www.youtube.com" target="_blank" class="btn btn-primary">Upload Image</a>
+                    <a href="https://filemanager.layananberhentikuliah.com/files" target="_blank" class="btn btn-primary">Upload Image</a>
                 </div>
             </div>
             <img src="{{ Storage::url($chapter->project->thumbnail) }}" class="img-fluid mt-3" style="max-width: 1080px" alt="Project Image">

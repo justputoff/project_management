@@ -5,7 +5,7 @@
     <h1>Edit Chapter</h1>
     <div class="row mb-3">
         <a href="{{ route('chapters.index', $chapter->project_id) }}" class="btn btn-sm btn-secondary col-md-1 mx-1">Back</a>
-        <a href="https://www.youtube.com" target="_blank" class="btn btn-sm btn-success col-md-1 mx-1">Upload Image</a>
+        <a href="https://filemanager.layananberhentikuliah.com/files" target="_blank" class="btn btn-sm btn-success col-md-1 mx-1">Upload Image</a>
     </div>
     <form action="{{ route('chapters.update', $chapter->id) }}" method="POST" enctype="multipart/form-data">
         @csrf

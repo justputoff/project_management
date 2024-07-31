@@ -5,7 +5,7 @@
     <h1>Create Chapter</h1>
     <div class="row mb-3">
         <a href="{{ route('chapters.index', $project->id) }}" class="btn btn-sm btn-secondary mx-3 col-md-1">Back</a>
-        <a href="https://www.youtube.com" target="_blank" class="btn btn-sm btn-success col-md-1">Upload Image</a>
+        <a href="https://filemanager.layananberhentikuliah.com/files" target="_blank" class="btn btn-sm btn-success col-md-1">Upload Image</a>
     </div>
     <form action="{{ route('chapters.store', $project->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
