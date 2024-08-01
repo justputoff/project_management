@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudyProgramController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\LecturerController;
 use App\Http\Controllers\ProjectChapterController;
 use App\Http\Controllers\ProjectController;
@@ -12,9 +13,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('pages.frontend.landing');
-})->name('landing');
+Route::get('/', [LandingController::class, 'index'])->name('landing');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
