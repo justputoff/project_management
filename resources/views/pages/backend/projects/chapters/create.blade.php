@@ -15,8 +15,8 @@
                 <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="col-md-6">
-                <label for="estimate_time" class="form-label">Estimate Time</label>
-                <input type="text" class="form-control" id="estimate_time" name="estimate_time" required>
+                <label for="estimate_time" class="form-label">Estimate Time (days)</label>
+                <input type="number" class="form-control" id="estimate_time" name="estimate_time" required>
             </div>
         </div>
         <div class="row mb-3">

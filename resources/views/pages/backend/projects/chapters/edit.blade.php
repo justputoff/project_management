@@ -17,13 +17,13 @@
             </div>
             <div class="col-md-6">
                 <label for="estimate_time" class="form-label">Estimate Time</label>
-                <input type="text" class="form-control" id="estimate_time" name="estimate_time" value="{{ $chapter->estimate_time }}" required>
+                <input type="number" class="form-control" id="estimate_time" name="estimate_time" value="{{ $chapter->estimate_time }}" required>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-md-12">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description" style="height: 200px" required>{{ $chapter->description }}</textarea>
+                <textarea class="form-control" id="editor" name="description" style="height: 200px" required>{{ $chapter->description }}</textarea>
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
