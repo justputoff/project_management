@@ -10,6 +10,6 @@ class LandingController extends Controller
     public function index()
     {
         $projects = Project::all();
-        return view('pages.frontend.landing.index', compact('projects'));
+        return view('pages.frontend.landing', compact('projects'));
     }
 }
