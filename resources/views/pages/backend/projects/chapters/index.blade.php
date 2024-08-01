@@ -38,7 +38,7 @@
               <form action="{{ route('chapters.statusUpdate', $chapter->id) }}" method="POST" class="d-flex">
                 @csrf
                 @method('PATCH')
-                <div class="input-group input-group-sm mx-2 w-75">
+                <div class="input-group input-group-sm mx-2 w-75" style="min-width:max-content;">
                   <select name="status" class="form-select form-select-sm">
                     <option value="pending" {{ $chapter->status == 'pending' ? 'selected' : '' }}>Pending</option>
                     <option value="accepted" {{ $chapter->status == 'accepted' ? 'selected' : '' }}>Accepted</option>
