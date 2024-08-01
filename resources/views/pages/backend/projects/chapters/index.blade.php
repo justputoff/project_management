@@ -18,10 +18,10 @@
             <th class="text-white">No</th>
             <th class="text-white">Project Name</th>
             <th class="text-white">Chapter Name</th>
-            <th class="text-white">Status</th>
-            <th class="text-white">Update Status</th>
             <th class="text-white">Start Date</th>
             <th class="text-white">End Date</th>
+            <th class="text-white">Status</th>
+            <th class="text-white">Update Status</th>
             <th class="text-white">Actions</th>
           </tr>
         </thead>
@@ -31,12 +31,14 @@
             <th scope="row">{{ $loop->iteration }}</th>
             <td>{{ $chapter->project->name }}</td>
             <td>{{ $chapter->name }}</td>
+            <td>{{ date('l, d F Y', strtotime($chapter->start_date)) }}</td>
+            <td>{{ date('l, d F Y', strtotime($chapter->end_date)) }}</td>
             <td>{{ $chapter->status }}</td>
             <td>
               <form action="{{ route('chapters.statusUpdate', $chapter->id) }}" method="POST" class="d-flex">
                 @csrf
                 @method('PATCH')
-                <div class="input-group input-group-sm mx-2 w-50">
+                <div class="input-group input-group-sm mx-2 w-75">
                   <select name="status" class="form-select form-select-sm">
                     <option value="pending" {{ $chapter->status == 'pending' ? 'selected' : '' }}>Pending</option>
                     <option value="accepted" {{ $chapter->status == 'accepted' ? 'selected' : '' }}>Accepted</option>
@@ -46,10 +48,8 @@
                   </select>
                 </div>
                 <button type="submit" class="btn btn-warning btn-sm mx-2">Update</button>
-            </form>
+              </form>
             </td>
-            <td>{{ date('l, d F Y', strtotime($chapter->start_date)) }}</td>
-            <td>{{ date('l, d F Y', strtotime($chapter->end_date)) }}</td>
             <td>
               <a href="{{ route('chapters.edit', $chapter->id) }}" class="btn btn-warning btn-sm">Edit</a>
               <a href="{{ route('chapters.show', $chapter->id) }}" class="btn btn-info btn-sm">Show</a>
