@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <div class="row">
                         @foreach ($projects as $project)
-                        <div class="col-md-3 mb-4">
+                        <div class="col-md-4 mb-4">
                             <div class="card h-100">
                                 <div class="card-body">
                                     <span class="badge bg-primary mb-2">Programming & Tech</span>
