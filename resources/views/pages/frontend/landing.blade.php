@@ -153,26 +153,26 @@
 <div class="container my-5">
     <h2 class="mb-4 text-center">Project Unggulan</h2>
     <div class="row">
-        @for ($i = 0; $i < 6; $i++)
+        @foreach ($projects as $project)
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
                         <span class="badge bg-primary mb-2">Programming & Tech</span>
-                        <h5 class="card-title">Mobile App - Pemesan Makanan</h5>
+                        <h5 class="card-title">{{ $project->name }}</h5>
                         <p class="card-text">Halo selamat datang di proyek kelompok kami, selamat melihat lihat</p>
-                        <img src="{{ asset('frontend/assets/images/project.png') }}" class="img-fluid mb-3" alt="Project Image">
+                        <img src="{{ Storage::url($project->thumbnail) }}" class="img-fluid mb-3" alt="Project Image">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('assets/img/avatars/1.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
                                 <img src="{{ asset('assets/img/avatars/1.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
                                 <img src="{{ asset('assets/img/avatars/1.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
                             </div>
-                            <small class="text-muted">20 May 2023</small>
+                            <small class="text-muted">{{ date('d F Y', strtotime($project->created_at)) }}</small>
                         </div>
                     </div>
                 </div>
             </div>
-        @endfor
+        @endforeach
     </div>
     <div class="text-center mt-4">
         <a href="#" class="btn btn-dark btn-lg">Lihat Program Lainnya</a>
