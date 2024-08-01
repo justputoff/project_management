@@ -160,7 +160,7 @@
                         <span class="badge bg-primary mb-2">Programming & Tech</span>
                         <h5 class="card-title">{{ $project->name }}</h5>
                         <p class="card-text">Halo selamat datang di proyek kelompok kami, selamat melihat lihat</p>
-                        <img src="{{ Storage::url($project->thumbnail) }}" class="img-fluid mb-3" alt="Project Image" style="max-height: 200px; object-fit: cover;">
+                        <img src="{{ Storage::url($project->thumbnail) }}" class="img-fluid mb-3 card" alt="Project Image" style="max-height: 200px; object-fit: cover;">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('assets/img/avatars/1.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
