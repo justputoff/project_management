@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -16,7 +17,8 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('pages.backend.users.create');
+        $roles = Role::all();
+        return view('pages.backend.users.create', compact('roles'));
     }
 
     public function store(Request $request)
