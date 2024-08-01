@@ -32,7 +32,7 @@
             <td>{{ date('l, d F Y', strtotime($project->start_date)) }}</td>
             <td>{{ date('l, d F Y', strtotime($project->end_date)) }}</td>
             <td>
-              <form action="{{ route('projects.updateStatus', $project->id) }}" method="POST">
+              <form action="{{ route('projects.updateStatus', $project->id) }}" method="POST" class="d-flex">
                 @csrf
                 @method('PATCH')
                 <div class="input-group input-group-sm mx-2 w-50">
