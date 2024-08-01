@@ -17,7 +17,7 @@
                     <h2>{{ $chapter->name }}</h2>
                     <span class="badge bg-primary">{{ $chapter->status }}</span>
                     <p class="mt-2">
-                        <img src="{{ asset('frontend/assets/images/avatar.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
+                        <img src="{{ asset('frontend/assets/images/avatar.svg') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
                         {{ $chapter->project->user->name }}<br>
                         <small class="text-muted">Project Manager</small>
                     </p>

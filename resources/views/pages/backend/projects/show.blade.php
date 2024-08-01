@@ -18,7 +18,7 @@
                     <h2>{{ $project->name }}</h2>
                     <span class="badge bg-primary">{{ $project->status }}</span>
                     <p class="mt-2">
-                        <img src="{{ asset('frontend/assets/images/avatar.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
+                        <img src="{{ asset('frontend/assets/images/avatar.svg') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
                         {{ $project->user->name }}<br>
                         <small class="text-muted">Project Manager</small>
                     </p>
