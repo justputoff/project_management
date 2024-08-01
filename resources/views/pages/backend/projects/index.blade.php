@@ -35,7 +35,7 @@
               <form action="{{ route('projects.updateStatus', $project->id) }}" method="POST" class="d-flex">
                 @csrf
                 @method('PATCH')
-                <div class="input-group input-group-sm mx-2 w-50">
+                <div class="input-group input-group-sm mx-2 w-75" style="min-width:max-content;">
                   <select name="status" class="form-select form-select-sm">
                     <option value="pending" {{ $project->status == 'pending' ? 'selected' : '' }}>Pending</option>
                     <option value="accepted" {{ $project->status == 'accepted' ? 'selected' : '' }}>Accepted</option>
