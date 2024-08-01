@@ -163,9 +163,9 @@
                         <img src="{{ asset('frontend/assets/images/project.png') }}" class="img-fluid mb-3" alt="Project Image">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
-                                <img src="{{ asset('frontend/assets/images/avatar.svg') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
-                                <img src="{{ asset('frontend/assets/images/avatar.svg') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
-                                <img src="{{ asset('frontend/assets/images/avatar.svg') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
+                                <img src="{{ asset('assets/img/avatars/1.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
+                                <img src="{{ asset('assets/img/avatars/1.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
+                                <img src="{{ asset('assets/img/avatars/1.png') }}" class="rounded-circle me-2" alt="Avatar" width="30" height="30">
                             </div>
                             <small class="text-muted">20 May 2023</small>
                         </div>
@@ -206,7 +206,7 @@
             <h2>what our customer say about us</h2>
             <p>“Saya sangat senang dengan adanya platform Project dalam meningkatkan pengembangan hard skill mahasiswa yang dipersembahkan oleh ElkaMania. Platform ini sangat bermanfaat bagi mahasiswa untuk mengembangkan keterampilan dan kompetensi mereka di bidang-bidang yang relevan dengan program studi mereka.”</p>
             <div class="d-flex align-items-center">
-                <img src="{{ asset('frontend/assets/images/avatar.svg') }}" class="rounded-circle me-3" alt="Customer Avatar" width="50" height="50">
+                <img src="{{ asset('assets/img/avatars/1.png') }}" class="rounded-circle me-3" alt="Customer Avatar" width="50" height="50">
                 <div>
                     <h5 class="mb-0">Eleanor Pena</h5>
                     <p class="mb-0">Student</p>
