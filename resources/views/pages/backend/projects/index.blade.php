@@ -37,6 +37,7 @@
                 @method('PATCH')
                 <div class="input-group input-group-sm mx-2 w-50">
                   <select name="status" class="form-select form-select-sm">
+                    <option value="pending" {{ $project->status == 'pending' ? 'selected' : '' }}>Pending</option>
                     <option value="accepted" {{ $project->status == 'accepted' ? 'selected' : '' }}>Accepted</option>
                     <option value="rejected" {{ $project->status == 'rejected' ? 'selected' : '' }}>Rejected</option>
                     <option value="on_progress" {{ $project->status == 'on_progress' ? 'selected' : '' }}>On Progress</option>
