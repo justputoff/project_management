@@ -19,6 +19,7 @@
             <th class="text-white">Status</th>
             <th class="text-white">Start Date</th>
             <th class="text-white">End Date</th>
+            <th class="text-white">Update Status</th>
             <th class="text-white">Actions</th>
           </tr>
         </thead>
@@ -30,6 +31,21 @@
             <td>{{ $project->status }}</td>
             <td>{{ date('l, d F Y', strtotime($project->start_date)) }}</td>
             <td>{{ date('l, d F Y', strtotime($project->end_date)) }}</td>
+            <td>
+              <form action="{{ route('projects.updateStatus', $project->id) }}" method="POST">
+                @csrf
+                @method('PATCH')
+                <div class="input-group input-group-sm mx-2 w-50">
+                  <select name="status" class="form-select form-select-sm">
+                    <option value="accepted" {{ $project->status == 'accepted' ? 'selected' : '' }}>Accepted</option>
+                    <option value="rejected" {{ $project->status == 'rejected' ? 'selected' : '' }}>Rejected</option>
+                    <option value="on_progress" {{ $project->status == 'on_progress' ? 'selected' : '' }}>On Progress</option>
+                    <option value="completed" {{ $project->status == 'completed' ? 'selected' : '' }}>Completed</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Update Status</button>
+              </form>
+            </td>
             <td>
               <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-warning btn-sm">Edit</a>
               <a href="{{ route('projects.show', $project->id) }}" class="btn btn-info btn-sm">Show</a>

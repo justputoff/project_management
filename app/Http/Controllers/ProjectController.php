@@ -86,6 +86,12 @@ class ProjectController extends Controller
         return redirect()->route('projects.index')->with('success', 'Project deleted successfully.');
     }
 
+    public function updateStatus(Request $request, Project $project)
+    {
+        $project->update(['status' => $request->status]);
+        return redirect()->route('projects.index')->with('success', 'Project status updated successfully.');
+    }
+
     public function commentStore(Request $request, Project $project)
     {
         $request->validate([
