@@ -43,7 +43,7 @@
                     <option value="completed" {{ $project->status == 'completed' ? 'selected' : '' }}>Completed</option>
                   </select>
                 </div>
-                <button type="submit" class="btn btn-primary btn-sm">Update Status</button>
+                <button type="submit" class="btn btn-primary btn-sm">Update</button>
               </form>
             </td>
             <td>
