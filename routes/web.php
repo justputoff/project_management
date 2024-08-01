@@ -71,6 +71,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('projects/{project}', [ProjectController::class, 'update'])->name('projects.update');
     Route::delete('projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
     Route::patch('projects/{project}/status', [ProjectController::class, 'updateStatus'])->name('projects.updateStatus');
+    Route::get('projects/list', [ProjectController::class, 'projectList'])->name('projects.projectList');
     
     //Project Comment routes
     Route::post('projects/{project}/comments', [ProjectController::class, 'commentStore'])->name('comments.store');
