@@ -29,7 +29,7 @@
       }
 
       .description-container img {
-        max-width: 720px;
+        max-width: 400px !important;
       }
 
       .description-container figcaption{
