@@ -16,6 +16,24 @@
       .navbar{
         background-color: #0F2139 !important;
       }
+      .description-container .description {
+          width: 100%;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+      }
+
+      .description-container img {
+        max-width: 100%;
+      }
+
+      .description-container figcaption{
+        text-align: center;
+      }
+
+      .description-container figure .media{
+        border: 1px solid #000;
+        width: 100px;
+      }
     </style>
   </head>
   <body style="font-family: 'Poppins', sans-serif;">
