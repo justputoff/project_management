@@ -6,8 +6,8 @@
         <div class="col-lg-12">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <div class="project-description overflow-hidden">
-                        {!! $project->description !!}
+                    <div class="description-container bg-white text-dark" style="max-height: 600px; overflow-y: auto;">
+                        <p class="mt-3 description text-dark bg-white">{!! $project->description !!}</p>
                     </div>
                 </div>
             </div>
@@ -18,14 +18,38 @@
 
 @push('styles')
 <style>
-    .project-description {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+      .description-container {
+          max-width: 100%;
+      }
+
+      .description-container .description {
+          width: 100%;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+      }
+
+      .description-container img {
         max-width: 100%;
+      }
+
+      .description-container figcaption{
+        text-align: center;
+      }
+
+      .description-container figure .media{
+        border: 1px solid #000;
+        width: 100px;
+      }
+      
+    .ck-editor__editable[role="textbox"] {
+      /* editing area */
+      min-height: 200px;
     }
-    .project-description img {
-        max-width: 100%;
-        height: auto;
+
+    .ck-content .image {
+      /* block images */
+      max-width: 80%;
+      margin: 20px auto;
     }
 </style>
 @endpush
