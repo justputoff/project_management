@@ -158,7 +158,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <span class="badge bg-primary mb-2">Programming & Tech</span>
-                        <span class="badge bg-primary mb-2">Programming & Tech</span>
+                        <span class="badge bg-success mb-2 text-end"><a href="{{ route('project', $project->id) }}" class="text-white text-decoration-none">Lihat Proyek</a></span>
                         <h5 class="card-title text-truncate">{{ $project->name }}</h5>
                         <img src="{{ Storage::url($project->thumbnail) }}" class="img-fluid mb-3 card p-1" alt="Project Image" style="max-height: 200px; min-width: max-content;">
                         <div class="d-flex justify-content-between align-items-center">
