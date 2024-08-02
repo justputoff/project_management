@@ -1,12 +1,12 @@
 @extends('layouts.frontend.main')
 
 @section('content')
-<div class="mt-4">
+<div class="mt-4 container">
     <div class="row justify-content-center">
         <div class="col-lg-12">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <div class="description-container container bg-white text-dark" style="max-height: 600px; overflow-y: auto;">
+                    <div class="description-container bg-white text-dark" style="max-height: 600px; overflow-y: auto;">
                         <p class="mt-3 description text-dark bg-white">{!! $project->description !!}</p>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
       }
 
       .description-container img {
-        max-width: 100%;
+        max-width: max-content;
       }
 
       .description-container figcaption{
