@@ -19,7 +19,6 @@ Route::get('/project/{id}', [LandingController::class, 'project'])->name('projec
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    // Route::get('project/list', [ProjectController::class, 'projectList'])->name('project.projectList');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -74,7 +73,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
     Route::patch('projects/{project}/status', [ProjectController::class, 'updateStatus'])->name('projects.updateStatus');
     Route::get('projects/list', [ProjectController::class, 'projectList'])->name('project.projectList');
-    
+
     //Project Comment routes
     Route::post('projects/{project}/comments', [ProjectController::class, 'commentStore'])->name('comments.store');
     Route::post('projects/comments/{comment}/reply', [ProjectController::class, 'commentReplyStore'])->name('comments.reply');
