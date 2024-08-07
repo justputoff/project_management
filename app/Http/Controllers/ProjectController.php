@@ -125,6 +125,7 @@ class ProjectController extends Controller
     public function projectList()
     {
         $projects = Project::all();
+        dd($projects);
         return view('pages.backend.projects.list', compact('projects'));
     }
 }
