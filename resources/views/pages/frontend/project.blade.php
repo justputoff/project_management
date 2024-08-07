@@ -7,7 +7,7 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <div class="description-container bg-white text-dark" style="max-height: 1920px; overflow-y: auto;">
-                        <p class="mt-3 description text-dark bg-white">{!! $project->description !!}</p>
+                        <p class="mt-3 description text-dark bg-white">{!! $project->description ?? '' !!}</p>
                     </div>
                 </div>
             </div>
