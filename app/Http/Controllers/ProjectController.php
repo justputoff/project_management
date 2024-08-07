@@ -121,11 +121,4 @@ class ProjectController extends Controller
 
         return redirect()->route('projects.show', $comment->project->id)->with('success', 'Comment added successfully.');
     }
-
-    // public function projectList()
-    // {
-    //     $projects = Project::all();
-    //     dd($projects);
-    //     return view('pages.backend.projects.list', compact('projects'));
-    // }
 }

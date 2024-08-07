@@ -32,14 +32,6 @@
                 </a>
               </li>
 
-              <!-- Project List -->
-              <li class="menu-item {{ Route::is('projects.list') ? 'active' : '' }}">
-                <a href="{{ route('project.projectList') }}" class="menu-link">
-                  <i class="menu-icon tf-icons bx bxs-book"></i>
-                  <div data-i18n="Project List">Project List</div>
-                </a>
-              </li> 
-
               <!-- Users -->
               <li class="menu-item {{ Route::is('users*') ? 'active' : '' }}">
                 <a href="{{ route('users.index') }}" class="menu-link">
