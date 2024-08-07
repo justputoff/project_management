@@ -33,7 +33,7 @@
               </li>
 
               <!-- Project List -->
-              <li class="menu-item {{ Route::is('project.projectList') ? 'active' : '' }}">
+              <li class="menu-item {{ Route::is('projects.list') ? 'active' : '' }}">
                 <a href="{{ route('project.projectList') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bxs-book"></i>
                   <div data-i18n="Project List">Project List</div>
